@@ -48,3 +48,23 @@ List of assets and their associated licenses:
 	Source/Author:	Wikimedia Commons
 	License:		Public domain
 	URL:			https://commons.wikimedia.org/wiki/File:Simple_CV_Joint_animated.gif
+
+- mic-on.png
+
+	Source/Author:	Microphone Icons by Uniconlabs
+	URL:			https://www.flaticon.com/premium-icon/voice_3293611
+
+- mic-off.png
+
+	Source/Author:	Microphone Icons by Uniconlabs
+	URL:			https://www.flaticon.com/premium-icon/voice_3293617
+
+- clipboard.png
+
+	Source/Author:	Clipboard Icon by Stockes Design
+	URL:			https://www.flaticon.com/premium-icon/clipboard_5387924
+
+- paper.png
+
+	Source/Author:	Paper Icon by Gajah Mada
+	URL:			https://www.flaticon.com/premium-icon/paper_3641195
