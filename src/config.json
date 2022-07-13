@@ -14,8 +14,7 @@
                     "secondary_icon": "back.png", 
                     "secondary_label": "", 
                     "active_icon": "", 
-                    "active_label": "", 
-                    "action": ""
+                    "active_label": ""
                 },
                 {
                     "button": 4, 
@@ -61,8 +60,7 @@
                     "secondary_icon": "back.png", 
                     "secondary_label": "", 
                     "active_icon": "", 
-                    "active_label": "", 
-                    "action": ""
+                    "active_label": ""
                 }
             ]
         }

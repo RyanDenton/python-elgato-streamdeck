@@ -183,7 +183,7 @@ def perform_key_actions(deck, page_number, key, state):
         key_config = get_key_config(deck, page_number, key)
 
         if key_config:
-            action = key_config["action"]
+            action = key_config.get("action", None)
 
             if action:
                 subprocess.run(action, shell=True)
