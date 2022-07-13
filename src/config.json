@@ -8,8 +8,9 @@
             "home_page": true,
             "keys": [
                 {
-                    "button": 0, 
-                    "primary_icon": "back.png"
+                    "button": 1, 
+                    "primary_icon": "code-dark.png",
+                    "display_page": 2
                 },
                 {
                     "button": 4, 
@@ -38,7 +39,9 @@
             "keys": [
                 {
                     "button": 0, 
-                    "primary_icon": "back.png"
+                    "primary_icon": "back.png",
+                    "display_page": 1
+
                 }
             ]
         }

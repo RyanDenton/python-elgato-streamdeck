@@ -155,6 +155,8 @@ def set_key_config_value(deck, page_number, key, config_item, value):
 # and updates the image on the StreamDeck.
 def update_key_image(deck, page_number, key, state):
 
+    print("update_key_image | Updating: page", page_number, " key ", key)
+
     # Determine what icon and label to use on the generated key.
     key_style = get_key_style(deck, page_number, key, state)
 
@@ -166,7 +168,6 @@ def update_key_image(deck, page_number, key, state):
         # Use a scoped-with on the deck to ensure we're the only thread using it
         # right now.
         with deck:
-            print('Updating Image on key: ', key)
             # Update requested key with the generated image.
             deck.set_key_image(key, image)
 
@@ -177,51 +178,58 @@ def update_key_image(deck, page_number, key, state):
 # Performs any configured actions for a button when it has been pressed.
 def perform_key_actions(deck, page_number, key, state):
     if state:
-        print('Performing action on key: ', key)
-
         # Get config for the individual key
         key_config = get_key_config(deck, page_number, key)
 
         if key_config:
-            action = key_config.get("action", None)
+            display_page = key_config.get("display_page", None)
+            if display_page:
+                print('Changing display to page: ', display_page)
+                load_page(deck, display_page)
+                
+                global CURRENT_PAGE
+                CURRENT_PAGE = display_page
 
+            action = key_config.get("action", None)
             if action:
+                print('Performing action on key: ', key)
                 subprocess.run(action, shell=True)
 
 # Loads the keys for a specified page onto the Streamdeck.
 def load_page(deck, page_number):
-    print("Loading Page:", page_number)
-    page_layout = [p for p in PAGES if p["page_number"] == page_number][0] # Get the layout of the intial home screen.
-
-    print("Page Layout:", page_layout)
+    page_layout = [p for p in PAGES if p["page_number"] == page_number][0] # Get the config for all the buttons on the specified page.
 
     # Update key images.
     if page_layout:
-        for key in range(deck.key_count()):
-            update_key_image(deck, page_layout["page_number"], key, False) # Update images to display the new page.
+        deck.reset() # Reset the deck, clearing all current images.
+
+        for key in page_layout["keys"]:
+            update_key_image(deck, page_layout["page_number"], key["button"], False) # Update images to display the new page.
+        
+        global CURRENT_PAGE
+        CURRENT_PAGE = page_layout.get("page_number", 'N/A')
 
 
 # Prints key state change information, updates the key image and performs any
 # associated actions when a key is pressed.
 def key_change_callback(deck, key, state):
     # Print new key state
-    print("Deck {} Key {} = {}".format(deck.id(), key, state), flush=True)
-
-    page_number = CURRENT_PAGE
-
-    # Perform any actions assigned to the key currently only supports 
-    # actions on button press, and not when a button released.
-    perform_key_actions(deck, page_number, key, state)
-
-    # Update the key image based on the new key state.
-    update_key_image(deck, page_number, key, state)
+    print("BUTTON STATE CHANGE DETECTED: Deck {} Key {} = {}".format(deck.id(), key, state), flush=True)
 
     # Check if the key is changing to the pressed state.
     if state:
-        key_style = get_current_key_style(deck, page_number, key, state)
+
+        # Update the key image based on the new key state.
+        update_key_image(deck, CURRENT_PAGE, key, state)
+
+        # Perform any actions assigned to the key currently only supports 
+        # actions on button press, and not when a button released.
+        perform_key_actions(deck, CURRENT_PAGE, key, state)
+
+        key_style = get_current_key_style(deck, CURRENT_PAGE, key, state)
 
         # When an exit button is pressed, close the application.
-        if key_style["button"] == 14:
+        if key_style.get("button") == 14:
             # Use a scoped-with on the deck to ensure we're the only thread
             # using it right now.
             with deck:
