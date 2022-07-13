@@ -1,46 +1,74 @@
-[
-    {
-        "button": 0, 
-        "primary_icon": "back.png", 
-        "primary_label": "", 
-        "secondary_icon": "back.png", 
-        "secondary_label": "", 
-        "active_icon": "", 
-        "active_label": "", 
-        "action": "",
-        "toggle": false
-    },
-    {
-        "button": 4, 
-        "primary_icon": "mic-on.png",
-        "primary_label": "un-mute", 
-        "secondary_icon": "mic-off.png",
-        "secondary_label": "mute", 
-        "active_icon": "mic-off.png", 
-        "active_label": "mute", 
-        "action": "xdotool key ctrl+shift+alt+F9",
-        "toggle": true
-    },
-    {
-        "button": 10, 
-        "primary_icon": "paper.png",
-        "primary_label": "", 
-        "secondary_icon": "paper.png",
-        "secondary_label": "", 
-        "active_icon": "", 
-        "active_label": "", 
-        "action": "xdotool key ctrl+c",
-        "toggle": false
-    },
-    {
-        "button": 11, 
-        "primary_icon": "clipboard.png",
-        "primary_label": "", 
-        "secondary_icon": "clipboard.png",
-        "secondary_label": "", 
-        "active_icon": "", 
-        "active_label": "", 
-        "action": "xdotool key ctrl+v",
-        "toggle": false
-    }
-]
+{
+    "deck_name": "Desktop Streamdeck",
+    "deck_type": "StreamdeckV2",
+    "pages":
+    [
+        { 
+            "page_number": 1,
+            "home_page": true,
+            "keys": [
+                {
+                    "button": 0, 
+                    "primary_icon": "back.png", 
+                    "primary_label": "", 
+                    "secondary_icon": "back.png", 
+                    "secondary_label": "", 
+                    "active_icon": "", 
+                    "active_label": "", 
+                    "action": "",
+                    "toggle": false
+                },
+                {
+                    "button": 4, 
+                    "primary_icon": "mic-on.png",
+                    "primary_label": "un-mute", 
+                    "secondary_icon": "mic-off.png",
+                    "secondary_label": "mute", 
+                    "active_icon": "mic-off.png", 
+                    "active_label": "mute", 
+                    "action": "xdotool key ctrl+shift+alt+F9",
+                    "toggle": true
+                },
+                {
+                    "button": 10, 
+                    "primary_icon": "paper.png",
+                    "primary_label": "", 
+                    "secondary_icon": "paper.png",
+                    "secondary_label": "", 
+                    "active_icon": "", 
+                    "active_label": "", 
+                    "action": "xdotool key ctrl+c",
+                    "toggle": false
+                },
+                {
+                    "button": 11, 
+                    "primary_icon": "clipboard.png",
+                    "primary_label": "", 
+                    "secondary_icon": "clipboard.png",
+                    "secondary_label": "", 
+                    "active_icon": "", 
+                    "active_label": "", 
+                    "action": "xdotool key ctrl+v",
+                    "toggle": false
+                }
+            ]
+        },
+        { 
+            "page_number": 2,
+            "home_page": false,
+            "keys": [
+                {
+                    "button": 0, 
+                    "primary_icon": "back.png", 
+                    "primary_label": "", 
+                    "secondary_icon": "back.png", 
+                    "secondary_label": "", 
+                    "active_icon": "", 
+                    "active_label": "", 
+                    "action": "",
+                    "toggle": false
+                }
+            ]
+        }
+    ]
+}

@@ -23,6 +23,7 @@ from StreamDeck.ImageHelpers import PILHelper
 # Folder location of image assets used by this example.
 ASSETS_PATH = os.path.join(os.path.dirname(__file__), "Assets")
 CONFIG_PATH = os.path.join(os.path.dirname(__file__), "config.json")
+CURRENT_PAGE = 1
 
 # Generates a custom tile with run-time generated text and custom image via the
 # PIL module.
@@ -48,9 +49,9 @@ def render_key_image(deck, icon_filename, font_filename, label_text):
     return PILHelper.to_native_format(deck, image)
 
 # Returns the current styling information for a key. Readonly.
-def get_current_key_style(deck, key, state):
+def get_current_key_style(deck, page_number, key, state):
 
-    key_config = get_key_config(deck, key)
+    key_config = get_key_config(deck, page_number, key)
     if not key_config:
         return {}
 
@@ -61,7 +62,7 @@ def get_current_key_style(deck, key, state):
     }
 
 # Returns styling information for a key based on its position and state.
-def get_key_style(deck, key, state):
+def get_key_style(deck, page_number, key, state):
     # Last button in the example application is the exit button.
     exit_key_index = deck.key_count() - 1
 
@@ -71,7 +72,7 @@ def get_key_style(deck, key, state):
     name = "Button" + str(key)
 
      # Get the config for the individual key
-    key_config = get_key_config(deck, key)
+    key_config = get_key_config(deck, page_number, key)
     if not key_config:
         return {}
 
@@ -130,32 +131,32 @@ def get_key_style(deck, key, state):
     }
 
 # returns the config value for an entry matching the specified key, from the config file.
-def get_key_config(deck, key):
+def get_key_config(deck, page_number, key):
+    
+    page = [p for p in PAGES if p["page_number"] == page_number][0]
 
     # Filter the array of key configs to just the one we are interested in.
-    matching_key_configs = [k for k in DECK_LAYOUT if k["button"] == key]
+    matching_key_configs = [k for k in page["keys"] if k["button"] == key]
 
     if matching_key_configs:
        key_config = matching_key_configs[0]
        return key_config
 
 # sets the config value for an entry matching the specified key/config value.
-def set_key_config_value(deck, key, config_item, value):
+def set_key_config_value(deck, page_number, key, config_item, value):
+    current_key_config = get_key_config(deck, page_number, key)
 
-    # Filter the array of key configs to just the one we are interested in.
-    matching_key_configs = [k for k in DECK_LAYOUT if k["button"] == key]
-
-    if matching_key_configs:
-       key_config = matching_key_configs[0]
-       key_config[config_item] = value
+    if current_key_config:
+        key_config = current_key_config
+        key_config[config_item] = value
     
 
 # Creates a new key image based on the key index, style and current key state
 # and updates the image on the StreamDeck.
-def update_key_image(deck, key, state):
-    print('Updating Image on key: ', key)
+def update_key_image(deck, page_number, key, state):
+
     # Determine what icon and label to use on the generated key.
-    key_style = get_key_style(deck, key, state)
+    key_style = get_key_style(deck, page_number, key, state)
 
     if key_style and key_style["icon"]:
 
@@ -165,26 +166,39 @@ def update_key_image(deck, key, state):
         # Use a scoped-with on the deck to ensure we're the only thread using it
         # right now.
         with deck:
+            print('Updating Image on key: ', key)
             # Update requested key with the generated image.
             deck.set_key_image(key, image)
 
         # Update the active elements in the config to reflect the new state of the key.
-        set_key_config_value(deck, key, "active_icon", key_style["icon"])
-        set_key_config_value(deck, key, "active_label", key_style["label"])
+        set_key_config_value(deck, page_number, key, "active_icon", key_style["icon"])
+        set_key_config_value(deck, page_number, key, "active_label", key_style["label"])
 
 # Performs any configured actions for a button when it has been pressed.
-def perform_key_actions(deck, key, state):
+def perform_key_actions(deck, page_number, key, state):
     if state:
         print('Performing action on key: ', key)
 
         # Get config for the individual key
-        key_config = get_key_config(deck, key)
+        key_config = get_key_config(deck, page_number, key)
 
         if key_config:
             action = key_config["action"]
 
             if action:
                 subprocess.run(action, shell=True)
+
+# Loads the keys for a specified page onto the Streamdeck.
+def load_page(deck, page_number):
+    print("Loading Page:", page_number)
+    page_layout = [p for p in PAGES if p["page_number"] == page_number][0] # Get the layout of the intial home screen.
+
+    print("Page Layout:", page_layout)
+
+    # Update key images.
+    if page_layout:
+        for key in range(deck.key_count()):
+            update_key_image(deck, page_layout["page_number"], key, False) # Update images to display the new page.
 
 
 # Prints key state change information, updates the key image and performs any
@@ -193,17 +207,18 @@ def key_change_callback(deck, key, state):
     # Print new key state
     print("Deck {} Key {} = {}".format(deck.id(), key, state), flush=True)
 
+    page_number = CURRENT_PAGE
+
     # Perform any actions assigned to the key currently only supports 
     # actions on button press, and not when a button released.
-    perform_key_actions(deck, key, state)
+    perform_key_actions(deck, page_number, key, state)
 
     # Update the key image based on the new key state.
-    update_key_image(deck, key, state)
+    update_key_image(deck, page_number, key, state)
 
     # Check if the key is changing to the pressed state.
     if state:
-        # TODO: This is currently run twice as part of a button press, can we optimise?
-        key_style = get_current_key_style(deck, key, state)
+        key_style = get_current_key_style(deck, page_number, key, state)
 
         # When an exit button is pressed, close the application.
         if key_style["button"] == 14:
@@ -242,11 +257,11 @@ if __name__ == "__main__":
             if sys.argv[1] == "-c" or sys.argv[1] == "--config":
                 CONFIG_PATH = sys.argv[2]
         
-        DECK_LAYOUT = json.load(open(CONFIG_PATH, 'r'))
+        DECK_CONFIG = json.load(open(CONFIG_PATH, 'r'))
+        PAGES = DECK_CONFIG["pages"]
+        HOME_PAGE = [p for p in PAGES if p["home_page"] == True][0] # Get the layout of the intial home screen.
 
-        # Set initial key images.
-        for key in range(deck.key_count()):
-            update_key_image(deck, key, False)
+        load_page(deck, HOME_PAGE["page_number"])
 
         # Register callback function for when a key state changes.
         deck.set_key_callback(key_change_callback)
