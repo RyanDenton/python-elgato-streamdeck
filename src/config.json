@@ -9,8 +9,7 @@
             "keys": [
                 {
                     "button": 0, 
-                    "primary_icon": "back.png",  
-                    "secondary_icon": "back.png"
+                    "primary_icon": "back.png"
                 },
                 {
                     "button": 4, 
@@ -24,13 +23,11 @@
                 {
                     "button": 10, 
                     "primary_icon": "paper.png", 
-                    "secondary_icon": "paper.png", 
                     "action": "xdotool key ctrl+c"
                 },
                 {
                     "button": 11, 
                     "primary_icon": "clipboard.png", 
-                    "secondary_icon": "clipboard.png", 
                     "action": "xdotool key ctrl+v"
                 }
             ]
@@ -41,8 +38,7 @@
             "keys": [
                 {
                     "button": 0, 
-                    "primary_icon": "back.png",  
-                    "secondary_icon": "back.png"
+                    "primary_icon": "back.png"
                 }
             ]
         }
