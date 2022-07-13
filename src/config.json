@@ -10,9 +10,7 @@
                 {
                     "button": 0, 
                     "primary_icon": "back.png",  
-                    "secondary_icon": "back.png", 
-                    "active_icon": "", 
-                    "active_label": ""
+                    "secondary_icon": "back.png"
                 },
                 {
                     "button": 4, 
@@ -20,25 +18,19 @@
                     "primary_label": "un-mute", 
                     "secondary_icon": "mic-off.png",
                     "secondary_label": "mute", 
-                    "active_icon": "mic-off.png", 
-                    "active_label": "mute", 
                     "action": "xdotool key ctrl+shift+alt+F9",
                     "toggle": true
                 },
                 {
                     "button": 10, 
                     "primary_icon": "paper.png", 
-                    "secondary_icon": "paper.png",
-                    "active_icon": "", 
-                    "active_label": "", 
+                    "secondary_icon": "paper.png", 
                     "action": "xdotool key ctrl+c"
                 },
                 {
                     "button": 11, 
                     "primary_icon": "clipboard.png", 
-                    "secondary_icon": "clipboard.png",
-                    "active_icon": "", 
-                    "active_label": "", 
+                    "secondary_icon": "clipboard.png", 
                     "action": "xdotool key ctrl+v"
                 }
             ]
@@ -50,9 +42,7 @@
                 {
                     "button": 0, 
                     "primary_icon": "back.png",  
-                    "secondary_icon": "back.png", 
-                    "active_icon": "", 
-                    "active_label": ""
+                    "secondary_icon": "back.png"
                 }
             ]
         }

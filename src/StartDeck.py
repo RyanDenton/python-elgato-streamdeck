@@ -115,7 +115,7 @@ def get_key_style(deck, page_number, key, state):
     label = ''
 
     if key_config:
-        icon = key_config[icon_type] or key_config["primary_icon"]
+        icon = key_config.get(icon_type, '') or key_config.get("primary_icon", '')
         label = key_config.get(label_type, '') or key_config.get("primary_label", '') # This line forces us to NEVER change the label if we don't specify one for the secondary state. Can we improve this?
 
     icon_location = ''
