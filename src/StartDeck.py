@@ -201,7 +201,7 @@ def load_page(deck, page_number):
 
     # Update key images.
     if page_layout:
-        deck.reset() # Reset the deck, clearing all current images.
+        deck.clear() # Reset the deck, clearing all current images.
 
         for key in page_layout["keys"]:
             update_key_image(deck, page_layout["page_number"], key["button"], False) # Update images to display the new page.
