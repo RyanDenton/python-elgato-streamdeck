@@ -325,6 +325,13 @@ class StreamDeck(ABC):
         pass
 
     @abstractmethod
+    def reset(self):
+        """
+        Resets the StreamDeck, clearing all button images.
+        """
+        pass
+
+    @abstractmethod
     def set_brightness(self, percent):
         """
         Sets the global screen brightness of the StreamDeck, across all the

@@ -79,6 +79,14 @@ class StreamDeckMini(StreamDeck):
         payload[0:2] = [0x0B, 0x63]
         self.device.write_feature(payload)
 
+    def clear(self):
+        """
+        Resets the StreamDeck, clearing all button images.
+        """
+
+        for key in range(self.KEY_COUNT):
+            self.set_key_image(key, None)
+
     def set_brightness(self, percent):
         """
         Sets the global screen brightness of the StreamDeck, across all the

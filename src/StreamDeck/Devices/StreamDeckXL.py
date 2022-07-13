@@ -112,6 +112,14 @@ class StreamDeckXL(StreamDeck):
         payload = bytearray(32)
         payload[0:2] = [0x03, 0x02]
         self.device.write_feature(payload)
+    
+    def clear(self):
+        """
+        Resets the StreamDeck, clearing all button images.
+        """
+
+        for key in range(self.KEY_COUNT):
+            self.set_key_image(key, None)
 
     def set_brightness(self, percent):
         """
