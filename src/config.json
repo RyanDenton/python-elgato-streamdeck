@@ -15,8 +15,7 @@
                     "secondary_label": "", 
                     "active_icon": "", 
                     "active_label": "", 
-                    "action": "",
-                    "toggle": false
+                    "action": ""
                 },
                 {
                     "button": 4, 
@@ -37,8 +36,7 @@
                     "secondary_label": "", 
                     "active_icon": "", 
                     "active_label": "", 
-                    "action": "xdotool key ctrl+c",
-                    "toggle": false
+                    "action": "xdotool key ctrl+c"
                 },
                 {
                     "button": 11, 
@@ -48,8 +46,7 @@
                     "secondary_label": "", 
                     "active_icon": "", 
                     "active_label": "", 
-                    "action": "xdotool key ctrl+v",
-                    "toggle": false
+                    "action": "xdotool key ctrl+v"
                 }
             ]
         },
@@ -65,8 +62,7 @@
                     "secondary_label": "", 
                     "active_icon": "", 
                     "active_label": "", 
-                    "action": "",
-                    "toggle": false
+                    "action": ""
                 }
             ]
         }

@@ -79,7 +79,7 @@ def get_key_style(deck, page_number, key, state):
     icon_type = ''
     label_type = ''
 
-    toggle_key = key_config["toggle"]
+    toggle_key = key_config.get('toggle', None)
 
 
     if toggle_key:
