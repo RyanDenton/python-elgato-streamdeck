@@ -9,8 +9,7 @@
             "keys": [
                 {
                     "button": 0, 
-                    "primary_icon": "back.png", 
-                    "primary_label": "", 
+                    "primary_icon": "back.png",  
                     "secondary_icon": "back.png", 
                     "secondary_label": "", 
                     "active_icon": "", 
@@ -29,8 +28,7 @@
                 },
                 {
                     "button": 10, 
-                    "primary_icon": "paper.png",
-                    "primary_label": "", 
+                    "primary_icon": "paper.png", 
                     "secondary_icon": "paper.png",
                     "secondary_label": "", 
                     "active_icon": "", 
@@ -39,8 +37,7 @@
                 },
                 {
                     "button": 11, 
-                    "primary_icon": "clipboard.png",
-                    "primary_label": "", 
+                    "primary_icon": "clipboard.png", 
                     "secondary_icon": "clipboard.png",
                     "secondary_label": "", 
                     "active_icon": "", 
@@ -55,8 +52,7 @@
             "keys": [
                 {
                     "button": 0, 
-                    "primary_icon": "back.png", 
-                    "primary_label": "", 
+                    "primary_icon": "back.png",  
                     "secondary_icon": "back.png", 
                     "secondary_label": "", 
                     "active_icon": "", 

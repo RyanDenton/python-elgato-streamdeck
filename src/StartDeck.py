@@ -90,7 +90,7 @@ def get_key_style(deck, page_number, key, state):
         if state == True:
             # Collect current values
             primary_icon = key_config["primary_icon"]
-            primary_label = key_config["primary_label"]
+            primary_label = key_config.get("primary_label", '')
             secondary_icon = key_config["secondary_icon"]
             secondary_label = key_config["secondary_label"]
             active_icon = key_config["active_icon"]
@@ -116,7 +116,7 @@ def get_key_style(deck, page_number, key, state):
 
     if key_config:
         icon = key_config[icon_type] or key_config["primary_icon"]
-        label = key_config[label_type] or key_config["primary_label"]
+        label = key_config.get(label_type, '') or key_config.get("primary_label", '')
 
     icon_location = ''
     if icon:
