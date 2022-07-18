@@ -46,12 +46,14 @@
                 {
                     "button": 10, 
                     "primary_icon": "paper.png", 
-                    "action": "xdotool key ctrl+c"
+                    "action": "xdotool key ctrl+c",
+                    "primary_label": "copy"
                 },
                 {
                     "button": 11, 
                     "primary_icon": "clipboard.png", 
-                    "action": "xdotool key ctrl+v"
+                    "action": "xdotool key ctrl+v",
+                    "primary_label": "paste"
                 },
                 {
                     "button": 13, 
