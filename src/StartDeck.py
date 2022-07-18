@@ -228,16 +228,16 @@ def key_change_callback(deck, key, state):
 
         key_style = get_current_key_style(deck, CURRENT_PAGE, key, state)
 
-        # When an exit button is pressed, close the application.
-        if key_style.get("button") == 14:
-            # Use a scoped-with on the deck to ensure we're the only thread
-            # using it right now.
-            with deck:
-                # Reset deck, clearing all button images.
-                deck.reset()
+        # # When an exit button is pressed, close the application.
+        # if key_style.get("button") == 14:
+        #     # Use a scoped-with on the deck to ensure we're the only thread
+        #     # using it right now.
+        #     with deck:
+        #         # Reset deck, clearing all button images.
+        #         deck.reset()
 
-                # Close deck handle, terminating internal worker threads.
-                deck.close()
+        #         # Close deck handle, terminating internal worker threads.
+        #         deck.close()
 
 
 if __name__ == "__main__":
