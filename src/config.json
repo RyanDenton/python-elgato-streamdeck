@@ -9,24 +9,24 @@
             "keys": [
                 {
                     "button": 0, 
-                    "primary_icon": "slack.png",
-                    "display_page": 3,
-                    "action": "slack"
-                },
-                {
-                    "button": 1, 
-                    "primary_icon": "code-dark.png",
-                    "display_page": 2
-                },
-                {
-                    "button": 2, 
                     "primary_icon": "folders/folder-blue.png",
                     "display_page": 4
                 },
                 {
-                    "button": 3, 
+                    "button": 1, 
                     "primary_icon": "terminal.png",
                     "action": "konsole"
+                },
+                {
+                    "button": 2, 
+                    "primary_icon": "code-dark.png",
+                    "display_page": 2
+                },
+                {
+                    "button": 3, 
+                    "primary_icon": "slack.png",
+                    "display_page": 3,
+                    "action": "slack"
                 },
                 {
                     "button": 4, 
