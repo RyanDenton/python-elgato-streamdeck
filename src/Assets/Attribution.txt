@@ -68,3 +68,7 @@ List of assets and their associated licenses:
 
 	Source/Author:	Paper Icon by Gajah Mada
 	URL:			https://www.flaticon.com/premium-icon/paper_3641195
+
+- git.png
+	Source/Author: 	Merge Icon by EDT.im
+	URL: 			https://www.flaticon.com/free-icon/merge_6577287

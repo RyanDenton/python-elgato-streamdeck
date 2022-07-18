@@ -38,10 +38,15 @@
             "home_page": false,
             "keys": [
                 {
-                    "button": 0, 
+                    "button": 0,
                     "primary_icon": "back.png",
                     "display_page": 1
 
+                },
+                {
+                    "button": 1,
+                    "primary_icon": "git-graph.png",
+                    "action": "xdotool key ctrl+shift+alt+v g"
                 }
             ]
         }
