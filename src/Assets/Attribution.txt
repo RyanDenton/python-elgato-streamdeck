@@ -64,6 +64,16 @@ List of assets and their associated licenses:
 	Source/Author:	Speaker Icon by Uniconlabs
 	URL:			https://www.flaticon.com/premium-icon/speaker_3293582
 
+- volume-up.png
+
+	Source/Author:	Volume Up Icon by Uniconlabs
+	URL:			https://www.flaticon.com/premium-icon/volume-up_3293728
+
+- volume-down.png
+
+	Source/Author:	Volume Down Icon by Uniconlabs
+	URL:			https://www.flaticon.com/premium-icon/volume-down_3293724
+
 - silent.png
 
 	Source/Author:	Silent Icon by Uniconlabs

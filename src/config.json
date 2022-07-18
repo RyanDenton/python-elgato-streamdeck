@@ -29,6 +29,12 @@
                     "action": "slack"
                 },
                 {
+                    "button": 8, 
+                    "primary_icon": "volume-up.png", 
+                    "action": "xdotool key ctrl+shift+F11",
+                    "primary_label": "volume +"
+                },
+                {
                     "button": 9, 
                     "primary_icon": "speaker.png",
                     "primary_label": "un-mute", 
@@ -46,6 +52,13 @@
                     "button": 11, 
                     "primary_icon": "clipboard.png", 
                     "action": "xdotool key ctrl+v"
+                },
+                {
+                    "button": 13, 
+                    "primary_icon": "volume-down.png", 
+                    "action": "xdotool key ctrl+shift+F10",
+                    "primary_label": "volume -"
+
                 },
                 {
                     "button": 14, 
