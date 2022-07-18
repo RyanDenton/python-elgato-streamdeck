@@ -47,6 +47,13 @@
                     "button": 1,
                     "primary_icon": "git-graph.png",
                     "action": "xdotool key ctrl+shift+alt+v g"
+                },
+                {
+                    "button": 5,
+                    "primary_icon": "menu-left.png",
+                    "secondary_icon": "menu-right.png",
+                    "action": "xdotool key ctrl+b",
+                    "toggle": true
                 }
             ]
         }
