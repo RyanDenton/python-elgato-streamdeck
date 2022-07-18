@@ -29,12 +29,12 @@
                     "action": "slack"
                 },
                 {
-                    "button": 4, 
-                    "primary_icon": "mic-on.png",
+                    "button": 9, 
+                    "primary_icon": "speaker.png",
                     "primary_label": "un-mute", 
-                    "secondary_icon": "mic-off.png",
+                    "secondary_icon": "silent.png",
                     "secondary_label": "mute", 
-                    "action": "xdotool key ctrl+shift+alt+F9",
+                    "action": "xdotool key ctrl+shift+F9",
                     "toggle": true
                 },
                 {
@@ -46,6 +46,15 @@
                     "button": 11, 
                     "primary_icon": "clipboard.png", 
                     "action": "xdotool key ctrl+v"
+                },
+                {
+                    "button": 14, 
+                    "primary_icon": "mic-on.png",
+                    "primary_label": "un-mute", 
+                    "secondary_icon": "mic-off.png",
+                    "secondary_label": "mute", 
+                    "action": "xdotool key ctrl+shift+alt+F9",
+                    "toggle": true
                 }
             ]
         },

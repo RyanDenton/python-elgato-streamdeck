@@ -59,6 +59,16 @@ List of assets and their associated licenses:
 	Source/Author:	Microphone Icons by Uniconlabs
 	URL:			https://www.flaticon.com/premium-icon/voice_3293617
 
+- speaker.png
+
+	Source/Author:	Speaker Icon by Uniconlabs
+	URL:			https://www.flaticon.com/premium-icon/speaker_3293582
+
+- silent.png
+
+	Source/Author:	Silent Icon by Uniconlabs
+	URL:			https://www.flaticon.com/premium-icon/silent_3293584
+
 - clipboard.png
 
 	Source/Author:	Clipboard Icon by Stockes Design
