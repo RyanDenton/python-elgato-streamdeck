@@ -72,3 +72,7 @@ List of assets and their associated licenses:
 - git.png
 	Source/Author: 	Merge Icon by EDT.im
 	URL: 			https://www.flaticon.com/free-icon/merge_6577287
+
+- folders/*.png
+	Source/Author	Papirus Icons by TobseF
+	URL:			https://github.com/TobseF/papirus-icon-theme-png-windows

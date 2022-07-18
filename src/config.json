@@ -19,6 +19,11 @@
                     "display_page": 2
                 },
                 {
+                    "button": 2, 
+                    "primary_icon": "folders/folder-blue.png",
+                    "display_page": 4
+                },
+                {
                     "button": 4, 
                     "primary_icon": "mic-on.png",
                     "primary_label": "un-mute", 
@@ -72,6 +77,48 @@
                     "primary_icon": "back.png",
                     "display_page": 1
 
+                }
+            ]
+        },
+        { 
+            "page_number": 4,
+            "home_page": false,
+            "keys": [
+                {
+                    "button": 0,
+                    "primary_icon": "back.png",
+                    "display_page": 1
+
+                },
+                {
+                    "button": 1,
+                    "primary_icon": "folders/folder-blue-home.png",
+                    "action": "xdg-open ~/"
+                },
+                {
+                    "button": 2,
+                    "primary_icon": "folders/folder-blue-download.png",
+                    "action": "xdg-open ~/Downloads"                    
+                },
+                {
+                    "button": 4,
+                    "primary_icon": "folders/folder-blue-steam.png",
+                    "action": "xdg-open ~/Desktop/Games"                    
+                },
+                {
+                    "button": 5,
+                    "primary_icon": "folders/folder-blue-git.png",
+                    "action": "xdg-open ~/Work/code"
+                },
+                {
+                    "button": 10,
+                    "primary_icon": "folders/folder-blue-google-drive.png",
+                    "action": "xdg-open ~/\"Google Drive\""                    
+                },
+                {
+                    "button": 11,
+                    "primary_icon": "folders/folder-blue-pictures.png",
+                    "action": "xdg-open ~/Pictures"                                        
                 }
             ]
         }
