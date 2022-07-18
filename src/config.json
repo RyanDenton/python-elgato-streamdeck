@@ -8,6 +8,12 @@
             "home_page": true,
             "keys": [
                 {
+                    "button": 0, 
+                    "primary_icon": "slack.png",
+                    "display_page": 3,
+                    "action": "slack"
+                },
+                {
                     "button": 1, 
                     "primary_icon": "code-dark.png",
                     "display_page": 2
@@ -54,6 +60,18 @@
                     "secondary_icon": "menu-right.png",
                     "action": "xdotool key ctrl+b",
                     "toggle": true
+                }
+            ]
+        },
+        { 
+            "page_number": 3,
+            "home_page": false,
+            "keys": [
+                {
+                    "button": 0,
+                    "primary_icon": "back.png",
+                    "display_page": 1
+
                 }
             ]
         }
