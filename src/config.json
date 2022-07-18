@@ -24,6 +24,11 @@
                     "display_page": 4
                 },
                 {
+                    "button": 3, 
+                    "primary_icon": "terminal.png",
+                    "action": "konsole"
+                },
+                {
                     "button": 4, 
                     "primary_icon": "mic-on.png",
                     "primary_label": "un-mute", 
