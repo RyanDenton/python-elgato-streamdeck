@@ -193,7 +193,7 @@ def perform_key_actions(deck, page_number, key, state):
             action = key_config.get("action", None)
             if action:
                 print('Performing action on key: ', key)
-                subprocess.run(action, shell=True)
+                subprocess.Popen(action, shell=True)
 
 # Loads the keys for a specified page onto the Streamdeck.
 def load_page(deck, page_number):
