@@ -4,6 +4,7 @@
     "pages":
     [
         { 
+            "page_name": "Home",
             "page_number": 1,
             "home_page": true,
             "keys": [
@@ -74,6 +75,7 @@
             ]
         },
         { 
+            "page_name": "vsCode",
             "page_number": 2,
             "home_page": false,
             "keys": [
@@ -98,6 +100,7 @@
             ]
         },
         { 
+            "page_name": "Slack",
             "page_number": 3,
             "home_page": false,
             "keys": [
@@ -110,6 +113,7 @@
             ]
         },
         { 
+            "page_name": "Navigation",
             "page_number": 4,
             "home_page": false,
             "keys": [
