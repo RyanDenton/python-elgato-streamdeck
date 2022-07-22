@@ -96,3 +96,7 @@ List of assets and their associated licenses:
 - folders/*.png
 	Source/Author	Papirus Icons by TobseF
 	URL:			https://github.com/TobseF/papirus-icon-theme-png-windows
+
+- save.png
+	Source/Author: 	Merge Icon by DinosoftLabs
+	URL: 			https://www.flaticon.com/free-icon/floppy-disk_346415

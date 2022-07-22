@@ -96,6 +96,11 @@
                     "secondary_icon": "menu-right.png",
                     "action": "xdotool key ctrl+b",
                     "toggle": true
+                },
+                {
+                    "button": 5, 
+                    "primary_icon": "save.png", 
+                    "action": "xdotool key ctrl+s"
                 }
             ]
         },
