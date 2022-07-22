@@ -101,6 +101,16 @@
                     "button": 5, 
                     "primary_icon": "save.png", 
                     "action": "xdotool key ctrl+s"
+                },
+                {
+                    "button": 10, 
+                    "primary_icon": "copy.png", 
+                    "action": "xdotool key ctrl+c"
+                },
+                {
+                    "button": 11, 
+                    "primary_icon": "paste.png", 
+                    "action": "xdotool key ctrl+v"
                 }
             ]
         },
