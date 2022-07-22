@@ -100,3 +100,7 @@ List of assets and their associated licenses:
 - save.png
 	Source/Author: 	Merge Icon by DinosoftLabs
 	URL: 			https://www.flaticon.com/free-icon/floppy-disk_346415
+
+- select-line.png
+	Source/Author: 	Text Field Icon by manshagraphics
+	URL: 			https://www.flaticon.com/free-icon/text-field_7754697
