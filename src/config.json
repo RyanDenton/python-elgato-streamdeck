@@ -91,7 +91,7 @@
                     "action": "xdotool key ctrl+shift+alt+v g"
                 },
                 {
-                    "button": 5,
+                    "button": 2,
                     "primary_icon": "menu-left.png",
                     "secondary_icon": "menu-right.png",
                     "action": "xdotool key ctrl+b",
