@@ -108,6 +108,11 @@
                     "action": "xdotool key end shift+home"
                 },
                 {
+                    "button": 7, 
+                    "primary_icon": "stage-selected.png", 
+                    "action": "xdotool key ctrl+k ctrl+alt+s"
+                },
+                {
                     "button": 10, 
                     "primary_icon": "copy.png", 
                     "action": "xdotool key ctrl+c"

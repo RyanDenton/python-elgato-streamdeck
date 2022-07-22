@@ -104,3 +104,7 @@ List of assets and their associated licenses:
 - select-line.png
 	Source/Author: 	Text Field Icon by manshagraphics
 	URL: 			https://www.flaticon.com/free-icon/text-field_7754697
+
+- stage-selected.png
+	Source/Author: 	Document Icon by Vector Stall
+	URL: 			https://www.flaticon.com/premium-icon/document_4595469
