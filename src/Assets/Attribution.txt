@@ -79,15 +79,15 @@ List of assets and their associated licenses:
 	Source/Author:	Silent Icon by Uniconlabs
 	URL:			https://www.flaticon.com/premium-icon/silent_3293584
 
-- clipboard.png
+- paste.png
 
-	Source/Author:	Clipboard Icon by Stockes Design
-	URL:			https://www.flaticon.com/premium-icon/clipboard_5387924
+	Source/Author:	Clipboard Icon by Freepik
+	URL:			https://www.flaticon.com/premium-icon/clipboard_2003286
 
-- paper.png
+- copy.png
 
-	Source/Author:	Paper Icon by Gajah Mada
-	URL:			https://www.flaticon.com/premium-icon/paper_3641195
+	Source/Author:	Paper Icon by DinosoftLabs
+	URL:			https://www.flaticon.com/free-icon/files_346372
 
 - git.png
 	Source/Author: 	Merge Icon by EDT.im

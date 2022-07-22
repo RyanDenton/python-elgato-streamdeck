@@ -45,13 +45,13 @@
                 },
                 {
                     "button": 10, 
-                    "primary_icon": "paper.png", 
+                    "primary_icon": "copy.png", 
                     "action": "xdotool key ctrl+c",
                     "primary_label": "copy"
                 },
                 {
                     "button": 11, 
-                    "primary_icon": "clipboard.png", 
+                    "primary_icon": "paste.png", 
                     "action": "xdotool key ctrl+v",
                     "primary_label": "paste"
                 },
