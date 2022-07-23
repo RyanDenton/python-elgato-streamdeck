@@ -105,7 +105,7 @@
                 {
                     "button": 6, 
                     "primary_icon": "select-line.png", 
-                    "action": "xdotool key end shift+home"
+                    "action": "xdotool key End shift+Home"
                 },
                 {
                     "button": 7, 
