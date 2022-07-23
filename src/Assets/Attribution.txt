@@ -108,3 +108,7 @@ List of assets and their associated licenses:
 - stage-selected.png
 	Source/Author: 	Document Icon by Vector Stall
 	URL: 			https://www.flaticon.com/premium-icon/document_4595469
+
+- quality-control.png
+	Source/Author: 	Quality Control Icon by Freepik
+	URL: 			https://www.flaticon.com/free-icon/quality-control_6890074

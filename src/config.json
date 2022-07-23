@@ -123,6 +123,11 @@
                     "action": "xdotool key ctrl+k ctrl+alt+s"
                 },
                 {
+                    "button": 13, 
+                    "primary_icon": "quality-control.png", 
+                    "action": "xdotool key ctrl+shift+alt+v t && sleep 1s && xdotool type 'npm run pre-push' && xdotool key Enter"
+                },
+                {
                     "button": 14, 
                     "primary_icon": "upload.png", 
                     "action": "xdotool key ctrl+shift+alt+v p"
