@@ -112,3 +112,7 @@ List of assets and their associated licenses:
 - quality-control.png
 	Source/Author: 	Quality Control Icon by Freepik
 	URL: 			https://www.flaticon.com/free-icon/quality-control_6890074
+	
+- debug.png
+	Source/Author: 	Antivirus Icon by juicy_fish
+	URL: 			https://www.flaticon.com/free-icon/antivirus_6404231
