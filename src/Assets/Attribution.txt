@@ -57,32 +57,32 @@ List of assets and their associated licenses:
 - mic-off.png
 
 	Source/Author:	Microphone Icons by Uniconlabs
-	URL:			https://www.flaticon.com/premium-icon/voice_3293617
+	URL:			https://www.flaticon.com/free-icon/voice_3293617
 
 - speaker.png
 
 	Source/Author:	Speaker Icon by Uniconlabs
-	URL:			https://www.flaticon.com/premium-icon/speaker_3293582
+	URL:			https://www.flaticon.com/free-icon/speaker_3293582
 
 - volume-up.png
 
 	Source/Author:	Volume Up Icon by Uniconlabs
-	URL:			https://www.flaticon.com/premium-icon/volume-up_3293728
+	URL:			https://www.flaticon.com/free-icon/volume-up_3293728
 
 - volume-down.png
 
 	Source/Author:	Volume Down Icon by Uniconlabs
-	URL:			https://www.flaticon.com/premium-icon/volume-down_3293724
+	URL:			https://www.flaticon.com/free-icon/volume-down_3293724
 
 - silent.png
 
 	Source/Author:	Silent Icon by Uniconlabs
-	URL:			https://www.flaticon.com/premium-icon/silent_3293584
+	URL:			https://www.flaticon.com/free-icon/silent_3293584
 
 - paste.png
 
 	Source/Author:	Clipboard Icon by Freepik
-	URL:			https://www.flaticon.com/premium-icon/clipboard_2003286
+	URL:			https://www.flaticon.com/free-icon/clipboard_2003286
 
 - copy.png
 
@@ -107,7 +107,7 @@ List of assets and their associated licenses:
 
 - stage-selected.png
 	Source/Author: 	Document Icon by Vector Stall
-	URL: 			https://www.flaticon.com/premium-icon/document_4595469
+	URL: 			https://www.flaticon.com/free-icon/document_4595469
 
 - quality-control.png
 	Source/Author: 	Quality Control Icon by Freepik
@@ -116,3 +116,7 @@ List of assets and their associated licenses:
 - debug.png
 	Source/Author: 	Antivirus Icon by juicy_fish
 	URL: 			https://www.flaticon.com/free-icon/antivirus_6404231
+
+- test.png
+	Source/Author: 	Test Icon by FreePik
+	URL: 			https://www.flaticon.com/free-icon/test_3235129
